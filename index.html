@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Request</title>
+    <title>Valentine's Surprise</title>
     <style>
         body { 
             text-align: center; 
@@ -11,49 +11,38 @@
             background-color: #f7e5d9;
         }
         h1 { color: #d91e36; font-size: 2em; }
-        .buttons {
+        p { font-size: 1.2em; color: #333; }
+        .btn-container {
             margin-top: 20px;
         }
         button {
-            font-size: 1.2em;
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .yes {
             background-color: #d91e36;
             color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
         }
-        .yes:hover {
-            background-color: #a9152b;
-        }
-        .no {
-            background-color: #bbb;
-            color: black;
-            position: absolute;
+        button:hover {
+            background-color: #b0152a;
         }
     </style>
-    <script>
-        function sayYes() {
-            alert("I knew it! ❤️ See you on Valentine's! 😘");
-        }
-        function moveNo() {
-            const btn = document.getElementById("noBtn");
-            btn.style.position = "absolute";
-            btn.style.top = Math.random() * window.innerHeight + "px";
-            btn.style.left = Math.random() * window.innerWidth + "px";
-        }
-    </script>
 </head>
 <body>
-    <h1>💌 You've been invited to a Valentine's mission 💌</h1>
-    <p>One question remains...</p>
-    <h2>Will you be my Valentine? ❤️</h2>
-    <div class="buttons">
-        <button class="yes" onclick="sayYes()">Yes</button>
-        <button class="no" id="noBtn" onmouseover="moveNo()">No</button>
+    <h1>💌 Hey baby... 💌</h1>
+    <p>I was going to write you a long love letter, but then I thought... why not make it a whole webpage instead? 💻💖</p>
+    <p>So here we are—just you, me, and a very important question...</p>
+    <h2>Will you be my Valentine? 🌹💘</h2>
+    <p><strong>Clicking "Yes" is highly recommended. Clicking "No" may result in immediate system shutdown due to heartbreak. 😭😂</strong></p>
+    
+    <div class="btn-container">
+        <button onclick="alert('I knew it! Best decision ever ❤️')">Yes</button>
+        <button onclick="alert('System shutting down... 💔 Just kidding, but ouch! 😭')">No</button>
     </div>
+    
+    <p><strong>With love,</strong></p>
+    <p><strong>LK ❤️</strong></p>
 </body>
 </html>
