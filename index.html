@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Request</title>
+    <style>
+        body { 
+            text-align: center; 
+            font-family: Arial, sans-serif; 
+            background-color: #f7e5d9;
+        }
+        h1 { color: #d91e36; font-size: 2em; }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: #d91e36;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #a9152b;
+        }
+        .no {
+            background-color: #bbb;
+            color: black;
+            position: absolute;
+        }
+    </style>
+    <script>
+        function sayYes() {
+            alert("I knew it! ❤️ See you on Valentine's! 😘");
+        }
+        function moveNo() {
+            const btn = document.getElementById("noBtn");
+            btn.style.position = "absolute";
+            btn.style.top = Math.random() * window.innerHeight + "px";
+            btn.style.left = Math.random() * window.innerWidth + "px";
+        }
+    </script>
+</head>
+<body>
+    <h1>💌 You've been invited to a Valentine's mission 💌</h1>
+    <p>One question remains...</p>
+    <h2>Will you be my Valentine? ❤️</h2>
+    <div class="buttons">
+        <button class="yes" onclick="sayYes()">Yes</button>
+        <button class="no" id="noBtn" onmouseover="moveNo()">No</button>
+    </div>
+</body>
+</html>
