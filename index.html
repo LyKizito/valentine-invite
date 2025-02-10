@@ -9,40 +9,55 @@
             text-align: center; 
             font-family: Arial, sans-serif; 
             background-color: #f7e5d9;
+            padding: 20px;
         }
         h1 { color: #d91e36; font-size: 2em; }
-        p { font-size: 1.2em; color: #333; }
-        .btn-container {
+        p { font-size: 1.2em; }
+        .buttons {
             margin-top: 20px;
         }
-        button {
-            background-color: #d91e36;
-            color: white;
+        .btn {
             font-size: 1.2em;
             padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
             margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        button:hover {
-            background-color: #b0152a;
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .no {
+            background-color: #cccccc;
+            color: black;
+            position: absolute;
         }
     </style>
+    <script>
+        function moveButton() {
+            let button = document.getElementById("noButton");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
 </head>
 <body>
-    <h1>💌 Hey baby... 💌</h1>
+    <h1>💌 Hey baby, 💌</h1>
     <p>I was going to write you a long love letter, but then I thought... why not make it a whole webpage instead? 💻💖</p>
     <p>So here we are—just you, me, and a very important question...</p>
     <h2>Will you be my Valentine? 🌹💘</h2>
-    <p><strong>Clicking "Yes" is highly recommended. Clicking "No" may result in immediate system shutdown due to heartbreak. 😭😂</strong></p>
     
-    <div class="btn-container">
-        <button onclick="alert('I knew it! Best decision ever ❤️')">Yes</button>
-        <button onclick="alert('System shutting down... 💔 Just kidding, but ouch! 😭')">No</button>
+    <div class="buttons">
+        <button class="btn yes" onclick="alert('Yay! I knew it ❤️')">Yes</button>
+        <button class="btn no" id="noButton" onmouseover="moveButton()">No</button>
     </div>
+
+    <p>Clicking "Yes" is highly recommended. Clicking "No" would be crazy but damn😂. Anyway, good luck trying to do that😭</p>
     
-    <p><strong>With love,</strong></p>
-    <p><strong>LK ❤️</strong></p>
+    <p>With love,</p>
+    <h3>LK ❤️</h3>
 </body>
 </html>
